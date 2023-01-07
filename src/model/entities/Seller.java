@@ -22,6 +22,13 @@ public class Seller implements Serializable {
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
+	
+	
+	public Seller() {
+		super();
+	}
+
+
 	public int getId() {
 		return id;
 	}
