@@ -15,10 +15,14 @@ public class Program {
 		Seller seller = sellerDao.findById(4);
 		System.out.println(seller);
 		
-		System.out.println("=========== TEST 2 ========= FIND BY DEPARTMENT");
+		System.out.println("\n=========== TEST 2 ========= FIND BY DEPARTMENT");
 		Department department = new Department(2, null);
-		List<Seller> list = sellerDao.findByDepartment(department);
-		list.stream().forEach(System.out::println);
+		List<Seller> listById = sellerDao.findByDepartment(department);
+		listById.stream().forEach(System.out::println);
+		
+		System.out.println("\n=========== TEST 3 ========= FIND ALL");
+		List<Seller> listAll = sellerDao.findAll();
+		listAll.stream().forEach(System.out::println);
 	}
 
 }
